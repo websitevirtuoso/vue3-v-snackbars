@@ -118,8 +118,8 @@ export default defineComponent({
 
       const timeout = event.timeout ? event.timeout : this.timeout
       const ignoreDuplicates = event.ignoreDuplicates ? event.ignoreDuplicates : this.ignoreDuplicates
-      const showCloseButton = event.showCloseButton ? event.showCloseButton : this.showCloseButton
-      const color = event.color ? event.color : this.color
+      const showCloseButton = event.hasOwnProperty('showCloseButton') ? event.showCloseButton : this.showCloseButton
+      const color = event.hasOwnProperty('color') ? event.color : this.color
 
       const { title, id } = event
 
