@@ -1,7 +1,7 @@
 {
   "name": "@websitevirtuoso/vue3-v-snackbars",
   "description": "Vuetify 3 Snackbars Library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "websitevirtuoso",
   "private": false,
   "publishConfig": {
@@ -25,6 +25,7 @@
   "peerDependencies": {
     "vue": "^3.0.0"
   },
+  "types": "./src/types.ts",
   "keywords": [
     "web",
     "front-end",
