@@ -14,7 +14,7 @@ Add dependencies to your `main.js`:
 
 ```javascript
 import { createApp } from 'vue'
-import Notifications from '@websitevirtuoso/vue3-v-snackbars'
+import Notifications from '@websitevirtuoso/vue3-v-snackbars/src/index'
 
 const app = createApp({...})
 app.use(Notifications)
@@ -39,7 +39,7 @@ Trigger notifications from your `.vue` files:
 
 Usage 
 // way 1:
-  import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/useNotification'
+  import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/src/useNotification'
 const notification = useNotification()
 useNotification({
   title: 'text',
@@ -47,18 +47,18 @@ useNotification({
 })
 
 // way 2:
-import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/useNotification'
+import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/src/useNotification'
 notification.success('message')
 
 // way 3:
-import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/useNotification'
+import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/src/useNotification'
 useNotification('message')
 ```
 
 Or trigger notifications from other files, for example, your router:
 
 ```javascript
-import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/useNotification'
+import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/src/useNotification'
 ```
 ### Component props
 

@@ -2,7 +2,7 @@
   "name": "@websitevirtuoso/vue3-v-snackbars",
   "description": "Vuetify 3 Snackbars Library",
   "version": "1.0.2",
-  "author": "websitevirtuoso",
+  "author": "Viktor Denisov",
   "private": false,
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -37,10 +37,8 @@
     "vuetify3-notification",
     "vuetify3-notifications"
   ],
-  "dependencies": {
-    "mitt": "^3.0.0"
-  },
   "devDependencies": {
+    "mitt": "^3.0.0",
     "@vitest/ui": "^0.26.3",
     "vitest": "^0.26.3",
     "vuetify": "^3.0.7",
