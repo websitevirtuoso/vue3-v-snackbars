@@ -22,7 +22,6 @@ export const emitter = mitt<EventType>()
 export interface NotificationsPluginOptions {
   name?: string // ability to set name for options approach
   componentName?: string // component name you can customise global name
-  setGlobal?: boolean // ability to register component globally
 }
 
 export type NotificationItem = Pick<NotificationsOptions, 'id' | 'title' | 'color' | 'timeout' | 'showCloseButton' | 'reverseDirection'>

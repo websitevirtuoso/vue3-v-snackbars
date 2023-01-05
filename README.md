@@ -2,6 +2,8 @@
 
 # Vue 3 Vuetify snackbars
 
+This repo base on very good plugin https://github.com/kyvg/vue3-notification. I adapted it to vuetify 3 with my own requirements
+
 ## Setup
 
 ```bash
@@ -14,12 +16,12 @@ Add dependencies to your `main.js`:
 
 ```javascript
 import { createApp } from 'vue'
-import Notifications from '@websitevirtuoso/vue3-v-snackbars/src/index'
+import notifications from '@websitevirtuoso/vue3-v-snackbars'
 
 const app = createApp({...})
-app.use(Notifications)
+app.use(notifications)
 // Or with optional params- here default values
-app.use(Notifications, { setGlobal: false, componentName: 'vNotifications', name: 'notify'})
+app.use(notifications, { componentName: 'vNotifications', name: 'notify'})
 // parameter "name" using for optional API ot call plugin like this.$notify()
 // I didn't test it, but think it should work
 ```
@@ -39,7 +41,7 @@ Trigger notifications from your `.vue` files:
 
 Usage 
 // way 1:
-  import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/src/useNotification'
+  import { useNotification } from '@websitevirtuoso/vue3-v-snackbars'
 const notification = useNotification()
 useNotification({
   title: 'text',
@@ -47,18 +49,18 @@ useNotification({
 })
 
 // way 2:
-import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/src/useNotification'
+import { useNotification } from '@websitevirtuoso/vue3-v-snackbars'
 notification.success('message')
 
 // way 3:
-import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/src/useNotification'
+import { useNotification } from '@websitevirtuoso/vue3-v-snackbars'
 useNotification('message')
 ```
 
 Or trigger notifications from other files, for example, your router:
 
 ```javascript
-import { useNotification } from '@websitevirtuoso/vue3-v-snackbars/src/useNotification'
+import { useNotification } from '@websitevirtuoso/vue3-v-snackbars'
 ```
 ### Component props
 
@@ -93,6 +95,5 @@ All options are optional:
 |---------------|---------|----------------|-------------------------------------------------------------------------------|
 | name          | String  | notify         | Defines the instance name. It's prefixed with the dollar sign. E.g. `$notify` |
 | componentName | String  | vNotifications | The component's name                                                          |
-| setGlobal     | Boolean | false          | Set component plugin globally or not                                          |
 
 > **Note**: setting `componentName` can cause issues when using SSR.
